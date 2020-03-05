@@ -323,6 +323,8 @@
 // }
 // let arr = [5, 3, 7]
 // let itr = createArrayIterator(arr)
+// console.log(createArrayIterator(arr)())
+// console.log(createArrayIterator(arr)())
 // console.log(itr())
 // console.log(itr())
 // console.log(itr())
@@ -380,7 +382,7 @@
 //     return arr
 // }
 // let perim = safePerimetrCalculation()
-// perim[0](45, 3))
+// perim[0](34, 0.3)
 // console.log(perim[1]())
 // console.log(perim[2]())
 
@@ -440,3 +442,122 @@
 // originFormat(true, 'string')
 // console.log(format())  // 'true'
 // console.log(typeof format())  // 'string'
+
+
+//                       Деструктуризация
+//                        task 1
+
+// let arr = ["Tom", "Sam", "Ray", "Bob"];
+// let [x, y, ,...z] = arr;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+
+//                        task 2
+
+
+// let names = {
+//     first: "Tom",
+//     second: "Sam",
+//     third: "Ray",
+//     fourth: "Bob"
+// };
+// let {first: f, third: x, fifth = "Name 5"} = names;
+// console.log(f);
+// console.log(x);
+// console.log(fifth);
+
+//                           task 3
+
+
+// let data = {
+//     names: ["Sam", "Tom", "Ray", "Bob"],
+//     ages: [20, 24, 22, 26],
+// };
+// let {
+//     names: [name1, name2, name3, name4],
+//     ages: [age1, age2, age3, age4]
+// } = data;
+// console.log(name2);
+// console.log(age2);
+// console.log(name4);
+// console.log(age4);
+
+
+
+
+//                          functions
+//                           task 4
+
+
+// function mul(...numbers) {
+//     let res = 1;
+//     let ind = true;
+//     console.log(numbers);
+//     for (let i = 0; i < numbers.length - 1; i++) {
+//         if (typeof(numbers[i]) === "number") {
+//            res*= numbers[i];
+//         }
+//         else {
+//             ind = false
+//         }
+//     }
+//     if (ind || res > 1 ) {
+//     return  res;
+//     }
+//     else  {
+//         return 0
+//     }
+// }
+// console.log(mul(1, "str", 1, 4, true)); //  6
+// console.log(mul(null, "str", false, true)); //  0
+
+
+
+
+//                         task 5
+
+
+// let obj = {
+//     name: "obj",
+//     print: function() {
+//         let res = () => console.log(this.name);
+//         res();
+//     }
+// };
+// function multiCaller (func, count) {
+//     for (let i = 0; i < count; i++) {
+//         func();
+//     }
+// }
+// multiCaller(obj.print(), 3);  // "obj", 3 раза
+
+
+
+
+//                       task 7
+
+
+// let names = {
+//     first: "Tom",
+//     second: "Sam",
+//     third: "Ray"
+// };
+// console.log(`"Первый: -${names.first}-, Второй "${names.second}", Третий => '${names.third}' "`); // "Первый: -Tom-, Второй - "Sam",  Третий => 'Ray' ""
+
+
+//                             task 8
+
+function format(s, ...v) {
+    for (let i = 0 ; i > s.length; i++) {
+         return `${v[v.length - i]} ${s[s.length - i]}`
+    }
+    // return `${v[2]} ${s[2]} ${v[1]} ${s[1]} ${v[0]} ${s[0]}`
+}
+let res1 = format`${1} + ${2} = ${3}`; // "3 = 2 + 1"
+console.log(res1);
+let res2 = format`Привет ${"Мир" }`; // "Мир Привет "
+console.log(res2);
+let res3 = format`left${"<->"}right`; // "right<->left"
+console.log(res3);
