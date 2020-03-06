@@ -8,17 +8,17 @@
 //  let name = prompt("what is your name?","Vitalii")
 //  alert(name)
 
-
 //                      task 1
+
 
 // let integer = +prompt("number")
 // if (integer > 0) {
-//     integer += 1
-// } 
-// else if (integer < 0) {
-//     integer -= 2
-// }
-// else {
+    //     integer += 1
+    // } 
+    // else if (integer < 0) {
+        //     integer -= 2
+        // }
+        // else {
 //     integer = 10
 // } 
 // alert(integer)
@@ -440,3 +440,77 @@
 // originFormat(true, 'string')
 // console.log(format())  // 'true'
 // console.log(typeof format())  // 'string'
+
+
+// function max (sal) {
+//     let res = Number.MIN_SAFE_INTEGER
+//     for (let key in sal) {
+//         if (sal[key] > res) {
+//             res = sal[key]
+//         } 
+//     }
+//     return res
+// }
+//let keys = Object.keys(sal)
+//console.log(keys)
+
+
+// let salaries = {
+//     John: 100,
+//     Bill: 300,
+//     Mike: 250
+// }
+// console.log(max(salaries))
+
+
+
+
+
+
+// let object = {
+//    // a: 7,
+//     read: function() {
+//        let a = Number(prompt('insert a', 'a'))
+//        let b = Number(prompt('insert b', 'b'))
+//        object.a = a;
+//        object.b = b;
+
+//     },
+//     sum: function() {
+//         return object.a + object.b
+         
+//     },
+//     mul: function() {
+//         return object.a * object.b
+//     }
+// }
+
+// object.read();
+// console.log(object.a)
+// console.log(object.b)
+// console.log(object.sum())
+// console.log(object.mul())
+
+
+
+//                 multiply
+
+
+// function mul(...arg) {
+//     let res = 0
+//     let flag = false
+    
+//     for (let i = 0; i < arg.length; i++) {
+//         if (typeof(arg[i]) === "number") {
+//             if (!flag) {
+//                 flag = true
+//                 res = 1 
+//             }
+//             res *= arg[i]        
+//         }
+//     }
+//     return res
+// }
+
+// console.log(mul(1, 'str', 2, 3, true))
+// console.log(mul(null, 'str', false, true))
