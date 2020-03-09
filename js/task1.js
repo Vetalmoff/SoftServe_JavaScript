@@ -514,7 +514,7 @@
 //     return res
 // }
 
-// console.log(mul(1, 'str', 2, 3, true))
+// alert(mul(1, 'str', 2, 3, 5, true))
 // console.log(mul(null, 'str', false, true))
 
 //                       Деструктуризация
@@ -622,16 +622,16 @@
 
 //                             task 8
 
-function format(s, ...v) {
-    for (let i = 0 ; i > s.length; i++) {
-         return `${v[v.length - i]} ${s[s.length - i]}`
-    }
-    // return `${v[2]} ${s[2]} ${v[1]} ${s[1]} ${v[0]} ${s[0]}`
-}
-let res1 = format`${1} + ${2} = ${3}`; // "3 = 2 + 1"
-console.log(res1);
-let res2 = format`Привет ${"Мир" }`; // "Мир Привет "
-console.log(res2);
-let res3 = format`left${"<->"}right`; // "right<->left"
-console.log(res3);
+// function format(s, ...v) {
+//     for (let i = 0 ; i > s.length; i++) {
+//          return `${v[v.length - i]} ${s[s.length - i]}`
+//     }
+//     // return `${v[2]} ${s[2]} ${v[1]} ${s[1]} ${v[0]} ${s[0]}`
+// }
+// let res1 = format`${1} + ${2} = ${3}`; // "3 = 2 + 1"
+// console.log(res1);
+// let res2 = format`Привет ${"Мир" }`; // "Мир Привет "
+// console.log(res2);
+// let res3 = format`left${"<->"}right`; // "right<->left"
+// console.log(res3);
 
