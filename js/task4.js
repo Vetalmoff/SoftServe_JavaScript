@@ -114,19 +114,20 @@
 // Напишите функцию для создания объектов, которые описывают MP3 плеер.
 
 
-// function createMP3 (name, height, weigth, color) {
-//     return {
-//         name: name,
-//         height: height,
-//         weigth: weigth,
-//         color: color,
-//         displayInfo: function () {
-//             console.log("My name: " + this.name + ", my weigth in grams: " + this.weigth + ", my color: " + this.color)
-//         }
-//     }
-// }
-// let Sony = createMP3("Walkman", "15 sm", 200, "red")
-// console.log(Sony.displayInfo())
+function createMP3 (name, height, weigth, color) {
+    return {
+        name: name,
+        height: height,
+        weigth: weigth,
+        color: color,
+        displayInfo: function () {
+            console.log("My name: " + this.name + ", my weigth in grams: " + this.weigth + ", my color: " + this.color)
+        }
+    }
+}
+let Sony = createMP3("Walkman", "15 sm", 200, "red")
+Sony.displayInfo()
+console.log(Sony.name)
 
 
 
@@ -135,17 +136,17 @@
 // Создайте тип объектов MP3 при помощи конструкторов объектов.
 
 
-function CreateMP3 (name, height, weigth, color) {
+// function CreateMP3 (name, height, weigth, color) {
     
-        this.name = name,
-        this.height = height,
-        this.weigth = weigth,
-        this.color = color,
-        this.displayInfo = function () {
-            console.log("My name: " + this.name + ", my weigth in grams: " + this.weigth + ", my color: " + this.color)
-        }
+//         this.name = name,
+//         this.height = height,
+//         this.weigth = weigth,
+//         this.color = color,
+//         this.displayInfo = function () {
+//             console.log("My name: " + this.name + ", my weigth in grams: " + this.weigth + ", my color: " + this.color)
+//         }
     
-}
-let Sony = new CreateMP3("Walkman", "15 sm", 200, "red")
-console.log(Sony.name)
-Sony.displayInfo()
+// }
+// let Sony = new CreateMP3("Walkman", "15 sm", 200, "red")
+// console.log(Sony.name)
+// Sony.displayInfo()
